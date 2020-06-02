@@ -2,7 +2,6 @@
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-
 }
 
 #page-create-point-header {
@@ -99,7 +98,7 @@ form button {
     border: 0;
     margin-top: 40px;
     /* transition: 400ms; transicao aplicada para tudo que aceita no botao */
-    transition background-color: 400ms; /* seria apenas para a cor */
+    transition: background-color 400ms; /* seria apenas para a cor */
 }
 
 form button:hover { /* quando passar o mouse em cima */
