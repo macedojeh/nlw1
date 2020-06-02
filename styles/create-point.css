@@ -24,5 +24,84 @@
     background-image: url('../assets/arrow-left.svg');
     display: flex;
     width: 20px;
-    height: 20px;
+    height: 24px;
+}
+
+form {
+    background-color: white;
+    margin: 80px auto;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 730px;
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input,
+form select {
+    background-color: #F0F0F5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    /* outline: none; quando seleciona o campo, a linha preta em volta da caixa some */
+    border-radius: 8px;
+}
+
+form selec { /* para chrome e mozilla */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + field { /* field que esta seguido de field, so temos um que eh o Numero/Complemento */
+    margin-left: 24px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    /* transition: 400ms; transicao aplicada para tudo que aceita no botao */
+    transition background-color: 400ms; /* seria apenas para a cor */
+}
+
+form button:hover { /* quando passar o mouse em cima */
+    background-color: #2fb86e;
 }
