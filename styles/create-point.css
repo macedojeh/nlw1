@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 
-#page-create-point-header {
+#page-create-point header {
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     background-image: url('../assets/arrow-left.svg');
     display: flex;
     width: 20px;
-    height: 24px;
+    height: 20px;
 }
 
 form {
@@ -32,6 +32,7 @@ form {
     padding: 64px;
     border-radius: 8px;
     max-width: 730px;
+    box-sizing: border-box;
 }
 
 form h1 {
@@ -62,8 +63,7 @@ form .field-group {
     display: flex;
 }
 
-form input,
-form select {
+form input, form select {
     background-color: #F0F0F5;
     border: 0;
     padding: 16px 24px;
@@ -83,7 +83,7 @@ form label {
     margin-bottom: 8px;
 }
 
-form .field-group .field + field { /* field que esta seguido de field, so temos um que eh o Numero/Complemento */
+form .field-group .field + .field { /* field que esta seguido de field, so temos um que eh o Numero/Complemento */
     margin-left: 24px;
 }
 

@@ -1,4 +1,5 @@
-function populateUfs(){
+function populateUfs()
+{
     const ufSelect = document.querySelector("select[name=uf]")
     fetch("https://servicodados.ibge.gov.br/api/v1/localidades/distritos")
     // .then( (res) => { return res.json() }) ou
@@ -17,7 +18,7 @@ function getCities(event) {
     const stateInput = document.querySelector("[name=state]")
 
     const ufValue = event.target.value
-    
+
     const indexOfSelectedState = event.target.selectedIndex
     stateInput.value = event.target.options[indexOfSelectedState].text
 
@@ -26,9 +27,9 @@ function getCities(event) {
     .then ( res => res.json() )
     .then ( cities => {
         for( const city of cities ) {
-            ufSelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
         }
-        citySelect.disabled = false
+        citySelect.disabled=false
     } )
 }
 
