@@ -1,6 +1,7 @@
 #page-create-point {
     width: 90%;
     max-width: 1100px;
+    /*alinhamento de caixa LADO DE FORA  */
     margin: 0 auto;
 }
 
@@ -18,21 +19,23 @@
     align-items: center;
 }
 
-#page-create-point header a span {
+#page-create-point header a spam {
     margin-right: 16px;
     background-image: url('../assets/arrow-left.svg');
     display: flex;
     width: 20px;
-    height: 20px;
+    height: 24px;
 }
 
 form {
     background-color: white;
+    
+    /* preenchimento */
     margin: 80px auto;
     padding: 64px;
     border-radius: 8px;
+    margin-top: 80px;
     max-width: 730px;
-    box-sizing: border-box;
 }
 
 form h1 {
@@ -68,7 +71,7 @@ form input, form select {
     border: 0;
     padding: 16px 24px;
     font-size: 16px;
-    /* outline: none; quando seleciona o campo, a linha preta em volta da caixa some */
+    outline: none; /* quando seleciona o campo, a linha preta em volta da caixa some */
     border-radius: 8px;
 }
 
