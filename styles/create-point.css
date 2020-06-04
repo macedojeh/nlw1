@@ -19,9 +19,9 @@
     align-items: center;
 }
 
-#page-create-point header a spam {
+#page-create-point header a span {
     margin-right: 16px;
-    background-image: url('../assets/arrow-left.svg');
+    background-image: url('/assets/arrow-left.svg');
     display: flex;
     width: 20px;
     height: 24px;
@@ -106,4 +106,42 @@ form button {
 
 form button:hover { /* quando passar o mouse em cima */
     background-color: #2fb86e;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* pode ser px ou fr - fracoes */
+    gap: 16px; /* separacao entre os elementos apenas para grid */
+}
+
+.items-grid li {
+    background-color: #F5F5F5;
+    list-style: none; /* para tirar os bullets das listas */
+    border: 2px solid #F5F5F5;
+    border-radius: 8px;
+    height: 180px;
+    padding: 32px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer; /* quando passar o mouse em cima, cursor ira virar maozinha */
+}
+
+.items-grid li span {
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+
+.items-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img, .items-grid li span {
+    pointer-events: none;
 }
