@@ -14,8 +14,11 @@ function populateUfs()
 populateUfs()
 
 function getCities(event) {
-    const citySelect = document.querySelector("select[name=city]")
-    const stateInput = document.querySelector("input[name=state]")
+    // const citySelect = document.querySelector("select[name=city]")
+    // const stateInput = document.querySelector("input[name=state]")
+
+    const citySelect = document.querySelector("[name=city]")
+    const stateInput = document.querySelector("[name=state]")
 
     const ufValue = event.target.value
 
@@ -67,10 +70,11 @@ function handleSelectedItem(event){
     // Se ja estiver selecionado, tirar da selecao
     if (alreadySelected >= 0){ // ou diferente != -1
         // Tirar da selecao
-        const filteredItems = selectedItems.filter(item =>{
+        const filteredItems = selectedItems.filter(item => {
             const itemIsDifferent = item != itemId
             return itemIsDifferent
         })
+        
         selectedItems = filteredItems
     } else {
         // Sena oestiver selecionado, adicionar a selecao
