@@ -41,7 +41,6 @@ document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
 
-
 // Itens de coleta
 // Pegar todos os LIs e rodar uma repeticao
 const itemsToCollect = document.querySelectorAll(".items-grid li")
@@ -49,6 +48,7 @@ for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
+const collectdItems = document.querySelector("input[name=items]")
 // Array - sequência não ordenada de dados
 let selectedItems = []
 
@@ -64,7 +64,6 @@ function handleSelectedItem(event){
         const itemFound = item == itemId // Isso sera true ou false
         return itemFound
     })
-
     // Se ja estiver selecionado, tirar da selecao
     if (alreadySelected >= 0){ // ou diferente != -1
         // Tirar da selecao
@@ -72,7 +71,11 @@ function handleSelectedItem(event){
             const itemIsDifferent = item != itemId
             return itemIsDifferent
         })
-    }
-    // Sena oestiver selecioando, adicionar a selecao
+        selectedItems = filteredItems
+    } else {
+        // Sena oestiver selecionado, adicionar a selecao
+        selectedItems.push(itemId)
+    }        
     // Atualizar o campo escondido com os itens selecionados
+    collectdItems.value = selectedItems
 }
