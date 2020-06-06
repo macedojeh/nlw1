@@ -63,17 +63,17 @@ db.serialize(() => {
 
 
     // 3 Consultar os dados da tabela
-    db.all(`SELECT * FROM places`, function (err, rows) { // * significa todos os campos da tabela
-    if (err) {
-        return console.log(err)
-    }
+    // db.all(`SELECT * FROM places`, function (err, rows) { // * significa todos os campos da tabela
+    // if (err) {
+    //     return console.log(err)
+    // }
 
-    console.log("Aqui estao seus registros: ")
-    console.log(rows)
-    } )
+    // console.log("Aqui estao seus registros: ")
+    // console.log(rows)
+    // } )
 
-    // 4 Deletar um dado da tabela
-    // db.run(`DELETE FROM places WHERE id = ?`, [8], function(err) {
+    // // 4 Deletar um dado da tabela
+    // db.run(`DELETE FROM places WHERE id = ?`, [], function(err) {
     //     if (err) {
     //         return console.log(err)
     //     }
