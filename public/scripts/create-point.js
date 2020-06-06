@@ -52,6 +52,7 @@ for (const item of itemsToCollect) {
 }
 
 const collectdItems = document.querySelector("input[name=items]")
+
 // Array - sequência não ordenada de dados
 let selectedItems = []
 
@@ -60,6 +61,8 @@ function handleSelectedItem(event){
     // add or remove uma classe com JavaScript - pode usar ADD, REMOVE ou TOGGLE. TOGGLE ja faz as duas coisas
     itemLi.classList.toggle("selected")
     const itemId = itemLi.dataset.id
+
+    console.log('ITEM ID: ', itemId)
     // Verificar se existem itens selecionados,
     // Se SIM,
     // Pegar os itens selecionados
@@ -80,6 +83,8 @@ function handleSelectedItem(event){
         // Sena oestiver selecionado, adicionar a selecao
         selectedItems.push(itemId)
     }        
+
+    console.log('selectedItems: ', selectedItems)
     // Atualizar o campo escondido com os itens selecionados
     collectdItems.value = selectedItems
 }
